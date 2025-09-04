@@ -24,7 +24,7 @@ export const EmployeesService = {
         if (!item) {
             throw new AppError(
                 'Employee not found',
-                404, 
+                400, 
                 'VALIDATION_ERROR'
             );
         }

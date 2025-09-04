@@ -25,7 +25,7 @@ app.get('/health/db', async (_req, res) => {
 app.use('/api', apiRoutes);
 
 // 404
-app.use((req, res, next) => {
+app.use((req, _res, next) => {
   next(new AppError(`Route ${req.method} ${req.originalUrl} not found`, 404, 'ROUTE_NOT_FOUND'));
 });
 
