@@ -1,0 +1,32 @@
+@"
+# Node deps
+node_modules/
+
+# Build/outputs
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Env (nunca versionar credenciais)
+.env
+.env.local
+.env.*.local
+.env.test
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+pgdata/
+"@ | Out-File -Encoding UTF8 .gitignore
