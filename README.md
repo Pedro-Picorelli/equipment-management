@@ -34,7 +34,7 @@ NODE_ENV=development
 PORT=3000
 
 # Postgres (serviço "db")
-DB_HOST=127.0.0.1          # <- usado quando a API roda FORA do docker; dentro do docker usamos DB_HOST=db
+DB_HOST=db          # usado 127.0.0.1 quando a API roda FORA do docker; dentro do docker usamos DB_HOST=db
 DB_PORT=5432               # se sua 5432 local estiver ocupada, mude o mapeamento no compose p/ 5433:5432 e ajuste aqui se for rodar fora do docker
 DB_USER=app
 DB_PASS=app
