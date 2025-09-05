@@ -23,7 +23,7 @@ git clone <URL_DO_REPOSITORIO>
 # ou SSH
 git clone git@github.com:<ORG>/<REPO>.git
 
-cd gestao-equipamentos
+cd equipment-management
 ```
 
 ### 3) Crie o arquivo `.env` (na raiz)
