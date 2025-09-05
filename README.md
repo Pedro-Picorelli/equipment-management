@@ -26,7 +26,7 @@ git clone git@github.com:<ORG>/<REPO>.git
 cd equipment-management
 ```
 
-### 3) Crie o arquivo `.env` (na raiz)
+### 3) Crie o arquivo `.env` (na raiz, equipment-management)
 Esse arquivo será usado para subir **db** e **app** no Docker. Exemplo seguro para ambiente local:
 ```ini
 # .env (desenvolvimento / docker)
@@ -50,7 +50,7 @@ DB_NAME_TEST=appdb_test
 
 > **Importante:** o compose injeta essas variáveis nos containers. Quando a **API roda dentro do Docker**, ela se conecta no Postgres usando `DB_HOST=db` (nome do serviço na rede do compose). O compose do projeto já força isso para você.
 
-### 4) (Opcional, mas recomendado para testes) Crie `.env.test.docker`
+### 4) (Opcional, mas recomendado para testes) Crie `.env.test.docker` (dentro da raiz, equipment-management)
 Esse arquivo é usado **pelos testes automatizados** (a API *dentro do container de teste* fala com o Postgres pelo host `db`):
 ```ini
 # .env.test.docker
@@ -64,7 +64,7 @@ DB_NAME=appdb_test
 ```
 
 ### 5) Suba os containers
-Com o Docker Desktop **aberto**, rode:
+Com o Docker Desktop **aberto**, rode dentro da pasta equipment-management:
 ```bash
 docker compose build --no-cache
 docker compose up -d
